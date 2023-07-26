@@ -125,3 +125,17 @@ function updateFavoritesList() {
   // Save favorite movies to local storage
   localStorage.setItem('favouriteMovies', JSON.stringify(favouriteMovies));
 }
+
+// Function to display the total number of favorites
+function displayFavoritesCount() {
+  const favorites = JSON.parse(localStorage.getItem('favouriteMovies') || '[]');
+  const favoritesCountContainer = document.getElementById('favoritesCount');
+
+  if (favoritesCountContainer) {
+    favoritesCountContainer.textContent = `${favorites.length}`;
+  }
+}
+// Load movie details when the movie page is loaded
+if (window.location.pathname.endsWith('index.html')) {
+  displayFavoritesCount();
+}
