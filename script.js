@@ -48,27 +48,26 @@ async function searchMovies() {
 }
 
 function displaySearchResults(results) {
-  const html = results.map((movie) => {
-    console.log("mov",movie)
-    const isFavourite = favouriteMovies.some((favMovie) => favMovie.imdbID === movie.imdbID);
-    const buttonText = isFavourite ? 'Remove from Fav' : 'Add to Favorites';
-
-    return `
-      <div class="card mt-3">
-        <img src="${movie.Poster}" class="card-img-top" alt="Movie Poster">
-        <div class="card-body">
-          <h5 class="card-title">${movie.Title}</h5>
-          <p class="card-text">${movie.Year}</p>
-          <button class="btn btn-primary" onclick="toggleFavorite('${movie.imdbID}')">${buttonText}</button>
-          <a href="movie.html?id=${movie.imdbID}" class="btn btn-secondary">More Info</a>
+    const html = results.map((movie) => {
+      const isFavourite = favouriteMovies.some((favMovie) => favMovie.imdbID === movie.imdbID);
+      const buttonText = isFavourite ? 'Remove from Fav' : 'Add to Favorites';
+  
+      return `
+        <div class="card mt-3">
+          <img src="${movie.Poster}" class="card-img-top" alt="Movie Poster">
+          <div class="card-body">
+            <h5 class="card-title">${movie.Title}</h5>
+            <p class="card-text">${movie.Year}</p>
+            <button class="btn btn-primary" onclick="toggleFavorite('${movie.imdbID}')">${buttonText}</button>
+            <a href="movie.html?id=${movie.imdbID}" class="btn btn-secondary">More Info</a>
+          </div>
         </div>
-      </div>
-    `;
-  }).join('');
-
-  searchResults.innerHTML = html;
-}
-
+      `;
+    }).join('');
+  
+    searchResults.innerHTML = html;
+  }
+  
 async function toggleFavorite(movieID) {
   const isFavourite = favouriteMovies.some((favMovie) => favMovie.imdbID === movieID);
 
