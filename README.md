@@ -20,4 +20,8 @@ IMDB Clone is a simple web application that allows users to search for movies, v
 1. Clone the repository to your local machine.
 
 ```bash
-git clone https://github.com/your-username/mini-imdb-clone.git
+git clone https://github.com/rahulraj9/imdb-clone.git
+
+- Open the project folder and navigate to the "index.html" file.
+- Open "index.html" in your web browser.
+
