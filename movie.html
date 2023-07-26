@@ -4,13 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Details</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="movies.css"> <!-- Link to your custom CSS file -->
 </head>
 <body>
-  <div id="movieDetails"></div>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1 class="header-title">Movie Details</h1>
+        <a href="index.html" class="back-btn"><i class="fas fa-home"></i> Home</a>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="movie-details">
+      <img src="https://via.placeholder.com/300" alt="Movie Poster" class="movie-poster">
+      <div class="details">
+        <h1 class="movie-title">Movie Title</h1>
+        <p class="info-item">Year: <span class="movie-year">Year</span></p>
+        <p class="info-item">Genre: <span class="movie-genre">Genre</span></p>
+        <p class="info-item">Director: <span class="movie-director">Director</span></p>
+        <p class="info-item">Plot: <span class="movie-plot">Movie Plot</span></p>
+        <!-- Add more movie details here as needed -->
+      </div>
+    </div>
+  </div>
+
 
   <script>
     // The movie details will be populated dynamically using JavaScript
-    const movieDetails = document.getElementById('movieDetails');
     const urlParams = new URLSearchParams(window.location.search);
     const movieID = urlParams.get('id');
 
@@ -25,17 +47,27 @@
     }
 
     function displayMovieDetails(movie) {
-      const html = `
-        <h1>${movie.Title}</h1>
-        <img src="${movie.Poster}" alt="Movie Poster">
-        <p>Year: ${movie.Year}</p>
-        <p>Genre: ${movie.Genre}</p>
-        <p>Director: ${movie.Director}</p>
-        <p>Plot: ${movie.Plot}</p>
-        <!-- Add more movie details here as needed -->
-      `;
-      movieDetails.innerHTML = html;
+      const moviePoster = document.querySelector('.movie-poster');
+      moviePoster.src = movie.Poster;
+
+      const movieTitle = document.querySelector('.movie-title');
+      movieTitle.textContent = movie.Title;
+
+      const movieYear = document.querySelector('.movie-year');
+      movieYear.textContent = movie.Year;
+
+      const movieGenre = document.querySelector('.movie-genre');
+      movieGenre.textContent = movie.Genre;
+
+      const movieDirector = document.querySelector('.movie-director');
+      movieDirector.textContent = movie.Director;
+
+      const moviePlot = document.querySelector('.movie-plot');
+      moviePlot.textContent = movie.Plot;
     }
   </script>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>

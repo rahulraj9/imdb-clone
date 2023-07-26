@@ -1,0 +1,70 @@
+/* favourites.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .favourites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .favourites-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .favourites-item:last-child {
+    border-bottom: none;
+  }
+  
+  .favourites-item-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .favourites-item-btn {
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .favourites-item-btn:hover {
+    background-color: #c82333;
+  }
+  
