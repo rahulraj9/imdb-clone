@@ -11,7 +11,11 @@
 <body>
   <div class="container mt-5">
     <h1>Mini IMDB Clone</h1>
-    <a href="favourites.html" class="btn btn-primary mt-3">My Favourite Movies</a>
+    <a href="favourites.html" class="fav_button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon">
+        <path d="M12 21.35l-1.45-1.32C5.4 16.13 2 13.25 2 9.5 2 7.42 3.42 6 5.5 6c1.74 0 3.41.81 4.5 2.09C11.09 6.81 12.76 6 14.5 6 16.58 6 18 7.42 18 9.5c0 3.75-3.4 6.63-8.55 10.54L12 21.35z"></path>
+      </svg><span id="favoritesCount"></span>
+    </a>
     <input type="text" id="searchInput" class="form-control mt-3" placeholder="Search for a movie...">
     <div id="searchResults" class="mt-3"></div>
   </div>

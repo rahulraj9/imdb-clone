@@ -104,8 +104,17 @@ function updateFavoritesList() {
   if (favouritesList) {
     const html = favouriteMovies.map((movie) => `
       <li class="list-group-item">
+      <div class="fav">
+      <div class="movposter">
       <img src=${movie.Poster} alt="Movie Poster" class="movie-poster">
-        <h1>${movie.Title}</h1> <p>(${movie.Year})</p>
+      </div>
+      <div class="details">
+        <h1>${movie.Title}</h1> </br>
+        <p>Release Year: ${movie.Year}</p>
+        <p>Actors: ${movie.Actors}</p>
+        <p>Collection:${movie.BoxOffice}</p>
+    </div>
+    </div>
         <button class="btn btn-danger btn-sm float-right" onclick="toggleFavorite('${movie.imdbID}')">Remove</button>
       </li>
     `).join('');

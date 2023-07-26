@@ -72,3 +72,25 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
+
+  .heart-icon-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 550px;
+  }
+  /* Style the heart icon */
+.heart-icon {
+    width: 32px;
+    height: 32px;
+    color: red; /* You can change the color of the heart icon */
+    transition: color 0.3s ease;
+  }
+  .heart-icon-button:hover .heart-icon {
+    color: #ff5a5f; /* Change the color on hover */
+  }
+  
+  .fav_button{
+    margin-left: 90%;
+  }
