@@ -1,5 +1,4 @@
 const API_KEY = '19e5c4fc';
-// const API_KEY = 'YOUR_OMDB_API_KEY';
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 
